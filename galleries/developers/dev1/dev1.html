@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev 1 - Projects</title>
+    <link rel="stylesheet" href="../../../css/gallery-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="back-btn" onclick="goBack()">← Back to Developers</div>
+        <div class="artist-info">
+            <div class="artist-name">realsir ./</div>
+            <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                <a href="https://x.com/realsirandrew" target="_blank" class="twitter-link">@realsirandrew</a>
+                <a href="https://github.com/dev1" target="_blank" class="twitter-link" style="color: #333;">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-container">
+        <div class="gallery-grid">
+            <!-- Project 1 -->
+            <div class="gallery-item large">
+                <div class="image-wrapper" onclick="openModal(this)">
+                    <img src="project1.jpg" alt="Project 1">
+                </div>
+                <a href="https://re-find-coin.vercel.app" target="_blank" class="project-link">
+                RE-FIND-COIN
+                </a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="gallery-item medium">
+                <div class="image-wrapper" onclick="openModal(this)">
+                    <img src="project2.jpg" alt="Project 2">
+                </div>
+                <a href="https://re-flip-coin.vercel.app" target="_blank" class="project-link">
+                    RE-FLIP-COIN
+                </a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="gallery-item small">
+                <div class="image-wrapper" onclick="openModal(this)">
+                    <img src="project3.jpg" alt="Project 3">
+                </div>
+                <a href="https://re-station.vercel.app" target="_blank" class="project-link">
+                    RE-STATION
+                </a>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="gallery-item medium">
+                <div class="image-wrapper" onclick="openModal(this)">
+                    <img src="project4.jpg" alt="Project 4">
+                </div>
+                <a href="https://re-insurance-museum.vercel.app" target="_blank" class="project-link">
+                    RE-INSURANCE-MUSUEM
+                </a>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="gallery-item large">
+                <div class="image-wrapper" onclick="openModal(this)">
+                    <img src="project5.jpg" alt="Project 5">
+                </div>
+                <a href="https://github.com/dev1/project-name-5" target="_blank" class="project-link">
+                    📦 Project Name 5
+                </a>
+            </div>
+
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+
+    <!-- Modal for full-size view -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script src="../../../js/gallery.js"></script>
+    <script>
+        // Prevent link clicks from opening modal
+        document.querySelectorAll('.project-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme 1 - Gallery</title>
+    <link rel="stylesheet" href="../../../css/gallery-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="back-btn" onclick="goBack()">← Back to Meme Lords</div>
+        <div class="artist-info">
+            <div class="artist-name">0xSunex</div>
+            <a href="https://x.com/0xSunex" target="_blank" class="twitter-link">@0xSunex</a>
+        </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-container">
+        <div class="gallery-grid">
+            <!-- Meme 1 - Large -->
+            <div class="gallery-item large" onclick="openModal(this)">
+                <img src="meme1/meme1.jpg" alt="Meme 1">
+            </div>
+
+            <!-- Meme 2 - Medium -->
+            <div class="gallery-item medium" onclick="openModal(this)">
+                <img src="meme1/meme2.jpg" alt="Meme 2">
+            </div>
+
+            <!-- Meme 3 - Small -->
+            <div class="gallery-item small" onclick="openModal(this)">
+                <img src="meme1/meme3.jpg" alt="Meme 3">
+            </div>
+
+            <!-- Meme 4 - Medium -->
+            <div class="gallery-item medium" onclick="openModal(this)">
+                <img src="meme1/meme4.jpg" alt="Meme 4">
+            </div>
+
+            <!-- Meme 5 - Large -->
+            <div class="gallery-item large" onclick="openModal(this)">
+                <img src="meme1/meme5.jpg" alt="Meme 5">
+            </div>
+
+            <!-- Add more memes as needed -->
+        </div>
+    </div>
+
+    <!-- Modal for full-size view -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script src="../../../js/gallery.js"></script>
+</body>
+</html>

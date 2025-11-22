@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+    background: linear-gradient(135deg, #FFF5E1 0%, #FFE4E1 100%);
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #2d3436;
+    text-shadow: 4px 4px 0px #ff6b9d;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #636e72;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.floating-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Circular Section Cards */
+.section-card {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    padding: 2rem;
+    background: white;
+    border: 6px solid #2d3436;
+    border-radius: 50%;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2);
+    cursor: grab;
+    user-select: none;
+    transition: transform 0.2s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-card:active {
+    cursor: grabbing;
+    transform: scale(0.98) rotate(2deg);
+}
+
+.section-card:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.3);
+}
+
+.section-card.artists {
+    background: #FF6B9D;
+    border-color: #E84393;
+}
+
+.section-card.developers {
+    background: #4ECDC4;
+    border-color: #00B894;
+}
+
+.section-card.memes {
+    background: #FFE66D;
+    border-color: #FDCB6E;
+}
+
+.section-card.creators {
+    background: #A29BFE;
+    border-color: #6C5CE7;
+}
+
+.section-icon {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #2d3436;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.section-description {
+    font-size: 0.85rem;
+    color: #2d3436;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.enter-btn {
+    padding: 0.6rem 1.5rem;
+    background: #2d3436;
+    color: white;
+    border: 4px solid #2d3436;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.enter-btn:hover {
+    background: white;
+    color: #2d3436;
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.enter-btn:active {
+    transform: translateY(0);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Decorative elements */
+.doodle {
+    position: absolute;
+    opacity: 0.3;
+    pointer-events: none;
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.doodle:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.doodle:nth-child(2) { top: 20%; right: 15%; animation-delay: 0.5s; }
+.doodle:nth-child(3) { bottom: 15%; left: 20%; animation-delay: 1s; }
+.doodle:nth-child(4) { bottom: 10%; right: 10%; animation-delay: 1.5s; }
+
+@media (max-width: 768px) {
+    .section-card {
+        width: 220px;
+        height: 220px;
+        padding: 1.5rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .section-icon {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .section-description {
+        font-size: 0.75rem;
+    }
+
+    .enter-btn {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
