@@ -8,10 +8,16 @@ function goBack() {
 function openModal(element) {
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modalImg');
-    const img = element.querySelector ? element.querySelector('img') : element;
     
-    modal.style.display = 'block';
-    modalImg.src = img.tagName === 'IMG' ? img.src : img.querySelector('img').src;
+    // If element is an img, use it directly; otherwise find img inside
+    const img = element.tagName === 'IMG' ? element : element.querySelector('img');
+    
+    if (img && img.src) {
+        modal.style.display = 'block';
+        modalImg.src = img.src;
+    } else {
+        console.error('No image found to display in modal');
+    }
 }
 
 // Close modal
