@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev 1 - Projects</title>
-    <link rel="stylesheet" href="../../css/gallery-style.css">
+    <link rel="stylesheet" href="../../../css/gallery-style.css">
 </head>
 <body>
     <!-- Header -->
@@ -13,7 +13,7 @@
         <div class="artist-info">
             <div class="artist-name">Dev 1</div>
             <div style="display: flex; gap: 1rem; justify-content: flex-end;">
-                <a href="https://x.com/dev1" target="_blank" class="twitter-link">@dev1</a>
+                <a href="https://x.com/Tan_pd_3006" target="_blank" class="twitter-link">@Tan_pd_3006</a>
                 <a href="https://github.com/dev1" target="_blank" class="twitter-link" style="color: #333;">GitHub</a>
             </div>
         </div>
@@ -23,28 +23,33 @@
     <div class="gallery-container">
         <div class="gallery-grid">
             <!-- Project 1 - Large -->
-            <div class="gallery-item large" onclick="openModal(this)">
-                <img src="dev1/project1.jpg" alt="Project 1">
+            <div class="gallery-item large">
+                <div class="image-wrapper" onclick="openModal(this)">
+                    <img src="project1.jpg" alt="Project 1">
+                </div>
+                <a href="https://re-flappy-yield.netlify.app" target="_blank" class="project-link">
+                RE-FLAPPY-YIELD
+                </a>
             </div>
 
             <!-- Project 2 - Medium -->
             <div class="gallery-item medium" onclick="openModal(this)">
-                <img src="dev1/project2.jpg" alt="Project 2">
+                <img src="dev2/project2.jpg" alt="Project 2">
             </div>
 
             <!-- Project 3 - Small -->
             <div class="gallery-item small" onclick="openModal(this)">
-                <img src="dev1/project3.jpg" alt="Project 3">
+                <img src="dev2/project3.jpg" alt="Project 3">
             </div>
 
             <!-- Project 4 - Medium -->
             <div class="gallery-item medium" onclick="openModal(this)">
-                <img src="dev1/project4.jpg" alt="Project 4">
+                <img src="dev2/project4.jpg" alt="Project 4">
             </div>
 
             <!-- Project 5 - Large -->
             <div class="gallery-item large" onclick="openModal(this)">
-                <img src="dev1/project5.jpg" alt="Project 5">
+                <img src="dev2/project5.jpg" alt="Project 5">
             </div>
 
             <!-- Add more projects as needed -->
@@ -57,6 +62,6 @@
         <img class="modal-content" id="modalImg">
     </div>
 
-    <script src="../../js/gallery.js"></script>
+    <script src="../../../js/gallery.js"></script>
 </body>
 </html>
