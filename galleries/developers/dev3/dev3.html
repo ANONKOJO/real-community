@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev 1 - Projects</title>
-    <link rel="stylesheet" href="../../css/gallery-style.css">
+    <link rel="stylesheet" href="../../../css/gallery-style.css">
 </head>
 <body>
     <!-- Header -->
     <div class="header">
         <div class="back-btn" onclick="goBack()">← Back to Developers</div>
         <div class="artist-info">
-            <div class="artist-name">Dev 1</div>
+            <div class="artist-name">Oluseyix</div>
             <div style="display: flex; gap: 1rem; justify-content: flex-end;">
-                <a href="https://x.com/dev1" target="_blank" class="twitter-link">@dev1</a>
+                <a href="https://x.com/Oluseyix" target="_blank" class="twitter-link">@Oluseyix</a>
                 <a href="https://github.com/dev1" target="_blank" class="twitter-link" style="color: #333;">GitHub</a>
             </div>
         </div>
@@ -22,9 +22,14 @@
     <!-- Gallery Grid -->
     <div class="gallery-container">
         <div class="gallery-grid">
-            <!-- Project 1 - Large -->
-            <div class="gallery-item large" onclick="openModal(this)">
-                <img src="dev1/project1.jpg" alt="Project 1">
+            <!-- Project 1 -->
+            <div class="gallery-item large">
+                <div class="image-wrapper" onclick="openModal(this)">
+                    <img src="project1.jpg" alt="Project 1">
+                </div>
+                <a href="https://re-points-calculator.netlify.app" target="_blank" class="project-link">
+                RE-POINTS-PENDLE-CALCULATOR
+                </a>
             </div>
 
             <!-- Project 2 - Medium -->
@@ -57,6 +62,6 @@
         <img class="modal-content" id="modalImg">
     </div>
 
-    <script src="../../js/gallery.js"></script>
+    <script src="../../../js/gallery.js"></script>
 </body>
 </html>
